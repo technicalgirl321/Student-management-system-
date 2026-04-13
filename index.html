@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chess — Advanced Offline (AI)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="card board-card">
+      <div class="top">
+        <div class="title">Chess — Advanced Offline</div>
+        <div class="turn"><span id="turnDot" class="turn-dot"></span> <span id="turnText">White</span></div>
+      </div>
+
+      <div class="board-area">
+        <div id="board" class="board" aria-label="Chess board"></div>
+        <div id="overlay" class="overlay" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="card panel">
+      <h3>Controls</h3>
+      <div class="controls">
+        <button id="twoBtn" class="btn">Two Player</button>
+        <button id="singleBtn" class="btn">Single Player</button>
+        <button id="flipBtn" class="btn">Flip Board</button>
+        <button id="undoBtn" class="btn">Undo</button>
+        <button id="restartBtn" class="btn primary">Restart</button>
+        <button id="aiTimeBtn" class="btn small">AI Time: 2s</button>
+      </div>
+
+      <div class="section">
+        <div class="label">Captured (White)</div>
+        <div id="capWhite" class="captured"></div>
+      </div>
+
+      <div class="section">
+        <div class="label">Captured (Black)</div>
+        <div id="capBlack" class="captured"></div>
+      </div>
+
+      <div class="section">
+        <div class="label">Move History</div>
+        <div id="moves" class="moves"></div>
+      </div>
+
+      <div id="status" class="status"></div>
+      <div class="footnote">Note: Promotion → Queen automatically. Castling & en-passant not implemented (can add on request).</div>
+    </div>
+  </div>
+
+  <script src="ai.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
